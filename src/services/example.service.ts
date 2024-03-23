@@ -1,9 +1,10 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 import { getBaseURL } from '@/utils/getBaseURL.util';
+import { ExamplePutBody } from '@/dto/example.dto';
 
 const API = ({ headers = {}, params = {} } = {}): AxiosInstance => {
   const user = JSON.parse(localStorage.getItem('user') as string) ?? {};
-  const BASE_URL = getBaseURL('APP_SETTINGS_TRANSACTION_API');
+  const BASE_URL = getBaseURL('APP_EXAMPLE_API');
 
   const instance = axios.create({
     baseURL: `${BASE_URL}/v2`,
@@ -18,14 +19,14 @@ const API = ({ headers = {}, params = {} } = {}): AxiosInstance => {
   return instance;
 };
 
-const SettingTransactionServices = {
+const ExampleServices = {
   getData: (): Promise<AxiosResponse> => {
     return API().get('/');
   },
 
-  putData: (data: object): Promise<AxiosResponse> => {
-    return API().put('/', data);
+  putData: (body: ExamplePutBody): Promise<AxiosResponse> => {
+    return API().put('/', body);
   },
 };
 
-export default SettingTransactionServices;
+export default ExampleServices;
