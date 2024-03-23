@@ -1,7 +1,7 @@
 import { Component } from 'vue';
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
-const routes: Array<RouteRecordRaw> = [
+const routes: Readonly<RouteRecordRaw[]> = [
   {
     path: '/',
     component: (): Promise<Component> => import('@/layout/ExampleLayout.vue'),
