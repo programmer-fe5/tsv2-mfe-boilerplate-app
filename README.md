@@ -1,4 +1,4 @@
-# ts-mfe-boilerplate-app
+# tsv2-mfe-boilerplate-app
 
 ## Project setup
 ```
