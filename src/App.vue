@@ -1,14 +1,25 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useLoadingStore } from '@/store';
-import { TSToast } from 'tsv2-library';
+import { onMounted, onBeforeMount } from 'vue';
+import { TSToast, TSLoading, useLoadingStore } from 'tsv2-library';
 
-const { loading } = useLoadingStore();
-const isLoading = computed(() => loading);
+const { setLoading } = useLoadingStore();
+
+onBeforeMount(() => {
+  setLoading(true); // Start Loading
+});
+
+onMounted(() => {
+  /**
+   * This is an example only. You may remove this.
+   */
+  setTimeout(() => {
+    setLoading(false); // Stop Loading
+  }, 3000);
+});
 </script>
 
 <template>
   <router-view />
   <TSToast />
-  <Loading v-model:active="isLoading" />
+  <TSLoading />
 </template>
