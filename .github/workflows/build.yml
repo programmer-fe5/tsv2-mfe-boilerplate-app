@@ -24,7 +24,7 @@ jobs:
       - name: Build project
         run: yarn build
         env: 
-          VUE_APP_EXAMPLE_API: ${{ secrets.APP_EXAMPLE_API }}
+          VUE_APP_ASSET_POLICY_API: ${{ secrets.APP_ASSET_POLICY_API }}
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
