@@ -15,7 +15,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
       {
         path: 'another-tab',
         name: 'AnotherExampleview',
-        component: (): Promise<Component> => import('@/views/ExampleView.vue'),
+        component: (): Promise<Component> => import('@/views/ExampleView2.vue'),
       },
     ],
   },

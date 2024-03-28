@@ -16,14 +16,10 @@ const tabMenuItems = ref([
     to: 'another-tab',
   },
 ]);
-
-const breadrumbMenus = computed<BreadcrumbMenu[]>(() => {
-  return breadcrumbs;
-});
 </script>
 
 <template>
-  <TSBreadcrumb :menus="breadrumbMenus" />
+  <TSBreadcrumb :menus="breadcrumbs" />
 
   <TSCard>
     <template #content>
