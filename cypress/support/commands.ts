@@ -1,26 +1,7 @@
-import { App, DefineComponent } from 'vue';
-import { mount } from '@cypress/vue';
-import { registerComponents } from '@/utils';
 import { addCompareSnapshotCommand } from 'cypress-visual-regression/dist/command';
 
 addCompareSnapshotCommand({
   errorThreshold: 0.1,
-});
-
-Cypress.Commands.add('mount', (component: DefineComponent, options = {}) => {
-  options.global = options.global || {};
-  options.global.stubs = options.global.stubs || {};
-  options.global.stubs['transition'] = false;
-  options.global.components = options.global.components || {};
-  options.global.plugins = options.global.plugins || [];
-
-  options.global.plugins.push({
-    install(app: App) {
-      registerComponents(app);
-    },
-  });
-
-  return mount(component, options);
 });
 
 Cypress.Commands.add('getSection', (section) => {
