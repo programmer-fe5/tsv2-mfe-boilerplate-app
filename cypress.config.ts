@@ -13,8 +13,8 @@ export default defineConfig({
     supportFile: 'cypress/support/e2e.ts',
     env: {
       visualRegressionType: 'regression',
-      visualRegressionBaseDirectory: 'cypress/snapshot/base',
-      visualRegressionDiffDirectory: 'cypress/snapshot/diff',
+      visualRegressionBaseDirectory: 'cypress/snapshots/base',
+      visualRegressionDiffDirectory: 'cypress/snapshots/diff',
       visualRegressionGenerateDiff: 'always',
       visualRegressionFailSilently: true,
     },
