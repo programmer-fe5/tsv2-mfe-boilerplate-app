@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted, onBeforeMount } from 'vue';
 import { TSToast, TSLoading, useLoadingStore } from 'tsv2-library';
+import ExampleComponent from './components/common/ExampleComponent.vue';
 
 const { setLoading } = useLoadingStore();
 
@@ -14,11 +15,12 @@ onMounted(() => {
    */
   setTimeout(() => {
     setLoading(false); // Stop Loading
-  }, 3000);
+  }, 1000);
 });
 </script>
 
 <template>
+  <ExampleComponent @update:model-value="console.log($event)" foo="product" />
   <router-view />
   <TSToast />
   <TSLoading />

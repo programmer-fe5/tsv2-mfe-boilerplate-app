@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import { TSBreadcrumb, TSCard, TSTabMenu } from 'tsv2-library';
-import { BreadcrumbMenu } from 'tsv2-library/dist/src/components/v2/Breadcrumb/Breadcrumb.vue';
+// eslint-disable-next-line capitalized-comments
+// import { BreadcrumbMenu } from 'tsv2-library/dist/src/components/v2/Breadcrumb/Breadcrumb.vue';
 import { useBreadcrumbStore } from '@/store';
 
 const { breadcrumbs } = useBreadcrumbStore();

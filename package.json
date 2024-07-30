@@ -2,6 +2,7 @@
   "name": "@tagsamurai/tsv2-mfe-boilerplate-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "serve": "vue-cli-service serve",
@@ -46,7 +47,7 @@
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
-    "cypress": "^13.7.0",
+    "cypress": "^13.13.1",
     "cypress-visual-regression": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "latest",
@@ -66,5 +67,6 @@
     "vite-plugin-istanbul": "^5.0.0",
     "vue-cli-plugin-single-spa": "~3.3.0",
     "webpack": "^5.90.3"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
